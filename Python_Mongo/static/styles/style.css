@@ -1,0 +1,10 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.padding{
+	padding-top: 50px;
+}
+.button-padding{
+	padding-bottom: 20px;
+}

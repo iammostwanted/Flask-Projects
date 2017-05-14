@@ -1,0 +1,15 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+	<!-- <h1>My favourite TV Show is {{ show }}</h1> -->		
+		<ul>		
+			{% for num in nums %}
+				{% if num % 2 == 0 %}
+					<li>{{ num }}</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</body>
+</html>

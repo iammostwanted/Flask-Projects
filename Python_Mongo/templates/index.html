@@ -1,0 +1,56 @@
+<html>	
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/dist/css/bootstrap.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">				
+				<div class="col-md-8 padding">
+				<a href="create" class="btn btn-primary">Create</a>
+
+
+				<!-- <form class="form-inline" method="POST">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Filter Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2" name="searchname" placeholder="Jane Doe">
+				  </div>				  
+				  <button type="submit" class="btn btn-default">Search</button>
+				</form> -->
+
+				<table class="table table-hover">
+					<tr>
+						<th>User ID</th>
+						<th>User Name</th>
+						<th>User Language</th>
+						<th>Actions</th>
+					</tr>
+					{% for user in result %}
+						<tr>
+							<td>
+								{{ user['_id'] }}
+							</td>
+							<td>
+								{{ user['name'] }}
+							</td>
+							<td>
+								{{ user['language'] }}
+							</td>	
+							<td>
+								<a class="btn btn-default" href="users/{{ user['_id'] }}">Read</a>
+								<a class="btn btn-success" href="update/{{ user['_id'] }}">Update</a>
+								<a class="btn btn-danger"  href="delete/{{ user['_id'] }}">Delete</a>
+							</td>					
+						</tr>
+					{% endfor %}			
+				</table>
+					
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+		
+	</body>
+</html>

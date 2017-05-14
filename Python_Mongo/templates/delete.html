@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-5 padding">
+					<h1 align="center">Update User!</h1>
+					<form class="form-horizontal" method="delete">
+
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-2 control-label">User Name</label>
+					    <div class="col-sm-10">
+					      <input type="text" class="form-control" placeholder="User name" name="username" value="{{ result['name'] }}">
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					    <label for="Language" class="col-sm-2 control-label">Language</label>
+					    <div class="col-sm-10">
+					      <!-- <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> -->
+
+					      <select class="form-control" name="user-language" selected="{{ result['language'] }}">
+					      	  <option value=""> {{ result['language']}} </option>
+						   </select>
+					    </div>
+					  </div>
+
+					  <div class="form-group">
+					  	<label for="approve" class="col-sm-6 control-label">Are you sure to delete?</label>
+					  </div>
+
+					 
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <button type="submit" class="btn btn-danger">Yes</button>
+					      <a class="btn btn-default" href="../../">No</a>
+					    </div>
+					  </div>
+
+					</form>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
+	</body>
+</html>
